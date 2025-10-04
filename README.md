@@ -58,7 +58,7 @@ public function store(Request $request) {
 
 ---
 
-### 4. Describe the role of Model and what is business logic in Model?
+4. Describe the role of Model and what is business logic in Model?
 
 **Role of Model:**
 
