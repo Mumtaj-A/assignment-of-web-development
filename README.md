@@ -32,7 +32,7 @@
   * Input can come from GET, POST, PUT, DELETE requests.
   * The controller accesses input data using request helper methods.
 
-**Example in Laravel:**
+** Example in Laravel:**
 
 ```php
 public function store(Request $request) {
@@ -41,7 +41,7 @@ public function store(Request $request) {
     // Process the data...
 }
 
-** 3. What are the key features of Laravel?
+### 3. What are the key features of Laravel?
 
 - MVC architecture support.
 - Eloquent ORM for database management.
