@@ -41,7 +41,7 @@ public function store(Request $request) {
     // Process the data...
 }
 
-### 3. What are the key features of Laravel?
+** 3. What are the key features of Laravel?
 
 - MVC architecture support.
 - Eloquent ORM for database management.
