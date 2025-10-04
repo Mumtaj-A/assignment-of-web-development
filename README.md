@@ -92,3 +92,50 @@ Route::post('/books/save', [BookController::class, 'saveBook']);
 // DELETE route to delete a book
 Route::delete('/books/delete/{id}', [BookController::class, 'deleteBook']);
 
+### 6. Write a code: You have a controller with 3 methods `showBookList()`, `saveBook()`, `deleteBook()`. Apply routes for all. Explain how each function is accessed via routes.
+
+```php
+// Routes in web.php
+use App\Http\Controllers\BookController;
+
+Route::get('/books', [BookController::class, 'showBookList']);    // Accessed via GET /books
+Route::post('/books/save', [BookController::class, 'saveBook']);  // Accessed via POST /books/save
+Route::delete('/books/delete/{id}', [BookController::class, 'deleteBook']); // DELETE /books/delete/{id}
+
+### How each function is accessed:
+
+**showBookList():**
+
+- Accessed by visiting the URL `/books` with a **GET** request.
+- Controller fetches all books and returns a view to display the list.
+
+**saveBook():**
+
+- Accessed by submitting a form or API call with **POST** method to `/books/save`.
+- Controller receives the data, validates it, and saves it to the database.
+
+**deleteBook():**
+
+- Accessed via a **DELETE** request to `/books/delete/{id}`, where `{id}` is the book's identifier.
+- Controller deletes the specified book from the database.
+
+---
+
+### 7. Explain in MVC, how routes, model, view and controller interact with each other.
+
+**Explanation:**
+
+- The **Route** receives an HTTP request URL and maps it to a **Controller** method.
+- The **Controller** processes the request and communicates with the **Model** to fetch or manipulate data.
+- The **Model** performs database operations and business logic.
+- The **Controller** receives data from the Model and passes it to the **View**.
+- The **View** renders the data into HTML and sends the response back to the client.
+
+**diagram :
+User Request (URL) --> Routes --> Controller --> Model (Database)
+                                       |
+                                       v
+                                    View (HTML)
+                                       |
+                                       v
+                                  User Response
